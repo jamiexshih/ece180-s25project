@@ -2,6 +2,9 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 import matplotlib.pyplot as plt
+import os
+os.makedirs("figures", exist_ok=True)
+
 
 def train(model, train_loader, val_loader, args):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
