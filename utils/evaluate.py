@@ -2,6 +2,9 @@ import torch
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 import matplotlib.pyplot as plt
 import numpy as np
+import os
+os.makedirs("figures", exist_ok=True)
+
 
 def evaluate(model, test_loader):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
